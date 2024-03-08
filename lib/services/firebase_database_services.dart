@@ -10,7 +10,7 @@ class FirebaseDatabaseServices {
         .collection("User-Student")
         .doc(uid)
         .get()
-        .then((value) => {busNumber = value.data()!["Bus Allocated"]});
+        .then((value) => {busNumber = value.data()!["busAllocated"]});
     if (busNumber == "") {
       return;
     } else {
@@ -18,7 +18,7 @@ class FirebaseDatabaseServices {
       await db
           .collection("User-Driver")
           .limit(1)
-          .where("Bus Number", isEqualTo: busNumber)
+          .where("busNumber", isEqualTo: busNumber)
           .get()
           .then((value) {
         for (var doc in value.docs) {
