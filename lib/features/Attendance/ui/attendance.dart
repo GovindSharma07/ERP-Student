@@ -1,6 +1,5 @@
 import 'package:erp_students/Model/attendanceModel.dart';
 import 'package:erp_students/services/firebase_database_services.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Attendance extends StatefulWidget {
@@ -108,11 +107,11 @@ class _AttendanceState extends State<Attendance> {
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.all(10),
-                      margin: EdgeInsets.all(5),
+                    padding: const EdgeInsets.all(10),
+                      margin: const EdgeInsets.all(5),
                       decoration: BoxDecoration(
                         border: Border.all(width: 2),
-                        borderRadius: BorderRadius.all(Radius.circular(10))
+                        borderRadius: const BorderRadius.all(Radius.circular(10))
                       ),
                       child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
